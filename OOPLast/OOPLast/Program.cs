@@ -49,7 +49,7 @@ mechanicTasks.Add(new MechanicTask(V5, Henrik));
 mechanicTasks.Add(new MechanicTask(V6, Henrik));
 mechanicTasks.Add(new MechanicTask(V7, Thomas));
 
-string custName = "Cringe Cringeson";
+string custName = "fasfsa 543ewrsf";
 string[] sub = custName.Split(' ');
 string veh = "";
 if (sub[0] == Henrik.FirstName && sub[1] == Henrik.LastName)
@@ -83,11 +83,9 @@ if (Enum.TryParse<VehiclesEnum>(veh, true, out _vehiclesEnum))
                 Console.WriteLine($"Vehicles: {item.VehicleInfo.Brand} {item.VehicleInfo.Model} {item.VehicleInfo.NummerPlate} Customer TelNr: {item.VehicleInfo.Customers.TeleNr}");
             }
         }
-        //else
-        //{
-        //    Console.WriteLine("Vehicle not found");
-        //    break;
-
-        //}
     }
+}
+else
+{
+    Console.WriteLine("Vehicle not found");
 }
