@@ -1,0 +1,15 @@
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\OOPLast.csproj.AssemblyReference.cache
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\OOPLast.GeneratedMSBuildEditorConfig.editorconfig
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\OOPLast.AssemblyInfoInputs.cache
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\OOPLast.AssemblyInfo.cs
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\OOPLast.csproj.CoreCompileInputs.cache
+D:\project\OOPLast\OOPLast\OOPLast\bin\Debug\net6.0\OOPLast.exe
+D:\project\OOPLast\OOPLast\OOPLast\bin\Debug\net6.0\OOPLast.deps.json
+D:\project\OOPLast\OOPLast\OOPLast\bin\Debug\net6.0\OOPLast.runtimeconfig.json
+D:\project\OOPLast\OOPLast\OOPLast\bin\Debug\net6.0\OOPLast.dll
+D:\project\OOPLast\OOPLast\OOPLast\bin\Debug\net6.0\OOPLast.pdb
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\OOPLast.dll
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\refint\OOPLast.dll
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\OOPLast.pdb
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\OOPLast.genruntimeconfig.cache
+D:\project\OOPLast\OOPLast\OOPLast\obj\Debug\net6.0\ref\OOPLast.dll
