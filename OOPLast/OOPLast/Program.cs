@@ -49,10 +49,17 @@ mechanicTasks.Add(new MechanicTask(V5, Henrik));
 mechanicTasks.Add(new MechanicTask(V6, Henrik));
 mechanicTasks.Add(new MechanicTask(V7, Thomas));
 
-string custName = "Henrik Nielsen";
+string custName = "Cringe Cringeson";
 string[] sub = custName.Split(' ');
-string veh = "car";
-
+string veh = "";
+if (sub[0] == Henrik.FirstName && sub[1] == Henrik.LastName)
+{
+    veh = Henrik.VehicleType;
+}
+else if (sub[0] == Cus3.FirstName && sub[1] == Cus3.LastName)
+{
+    veh = V3.VehicleType;
+}
 VehiclesEnum _vehiclesEnum;
 if (Enum.TryParse<VehiclesEnum>(veh, true, out _vehiclesEnum))
 {
@@ -61,20 +68,26 @@ if (Enum.TryParse<VehiclesEnum>(veh, true, out _vehiclesEnum))
 
     foreach (var item in mechanicTasks)
     {
-        foreach (var item2 in mechanicTasks)
+        if (item.MechanicInfo.VehicleType == _vehiclesEnum.ToString())
         {
-            if (item2.MechanicInfo.VehicleType == _vehiclesEnum.ToString())
+            foreach (var item2 in mechanicTasks)
             {
                 if (item.VehicleInfo.Customers.FirstName == sub[0] && item.VehicleInfo.Customers.LastName == sub[1])
                 {
+
                     Console.WriteLine($"{item.MechanicInfo.FirstName} {item.MechanicInfo.LastName} Vehicles: {item2.VehicleInfo.Brand} {item2.VehicleInfo.Model} {item2.VehicleInfo.NummerPlate}");
                 }
-
-                else if (item.MechanicInfo.FirstName == sub[0] && item.MechanicInfo.LastName== sub[1])
-                {
-                    Console.WriteLine($"Vehicles: {item.VehicleInfo.Brand} {item.VehicleInfo.Model} {item.VehicleInfo.NummerPlate} Customer TelNr: {item.VehicleInfo.Customers.TeleNr}");
-                }
+            }
+            if (item.MechanicInfo.FirstName == sub[0] && item.MechanicInfo.LastName == sub[1])
+            {
+                Console.WriteLine($"Vehicles: {item.VehicleInfo.Brand} {item.VehicleInfo.Model} {item.VehicleInfo.NummerPlate} Customer TelNr: {item.VehicleInfo.Customers.TeleNr}");
             }
         }
+        //else
+        //{
+        //    Console.WriteLine("Vehicle not found");
+        //    break;
+
+        //}
     }
 }
