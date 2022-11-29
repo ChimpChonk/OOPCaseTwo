@@ -18,5 +18,7 @@ namespace OOPLast.Code
             LastName = lastName;
             TeleNr = teleNr;
         }
+
+
     }
 }

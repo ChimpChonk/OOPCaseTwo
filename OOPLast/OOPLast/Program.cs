@@ -49,7 +49,7 @@ mechanicTasks.Add(new MechanicTask(V5, Henrik));
 mechanicTasks.Add(new MechanicTask(V6, Henrik));
 mechanicTasks.Add(new MechanicTask(V7, Thomas));
 
-string custName = "fasfsa 543ewrsf";
+string custName = "Cringe Cringeson";
 string[] sub = custName.Split(' ');
 string veh = "";
 if (sub[0] == Henrik.FirstName && sub[1] == Henrik.LastName)
@@ -63,25 +63,18 @@ else if (sub[0] == Cus3.FirstName && sub[1] == Cus3.LastName)
 VehiclesEnum _vehiclesEnum;
 if (Enum.TryParse<VehiclesEnum>(veh, true, out _vehiclesEnum))
 {
-    int vehIndex = vehicleEnumDic.GetValueOrDefault(_vehiclesEnum);
-    Mechanic mechanic = mechList[vehIndex];
-
     foreach (var item in mechanicTasks)
     {
-        if (item.MechanicInfo.VehicleType == _vehiclesEnum.ToString())
+        foreach (var item2 in mechanicTasks)
         {
-            foreach (var item2 in mechanicTasks)
+            if (item.VehicleInfo.Customers.FirstName == sub[0] && item.VehicleInfo.Customers.LastName == sub[1])
             {
-                if (item.VehicleInfo.Customers.FirstName == sub[0] && item.VehicleInfo.Customers.LastName == sub[1])
-                {
-
-                    Console.WriteLine($"{item.MechanicInfo.FirstName} {item.MechanicInfo.LastName} Vehicles: {item2.VehicleInfo.Brand} {item2.VehicleInfo.Model} {item2.VehicleInfo.NummerPlate}");
-                }
+                Console.WriteLine($"{item.MechanicInfo.FirstName} {item.MechanicInfo.LastName} Vehicles: {item2.VehicleInfo.Brand} {item2.VehicleInfo.Model} {item2.VehicleInfo.NummerPlate}");
             }
-            if (item.MechanicInfo.FirstName == sub[0] && item.MechanicInfo.LastName == sub[1])
-            {
-                Console.WriteLine($"Vehicles: {item.VehicleInfo.Brand} {item.VehicleInfo.Model} {item.VehicleInfo.NummerPlate} Customer TelNr: {item.VehicleInfo.Customers.TeleNr}");
-            }
+        }
+        if (item.MechanicInfo.FirstName == sub[0] && item.MechanicInfo.LastName == sub[1])
+        {
+            Console.WriteLine($"Vehicles: {item.VehicleInfo.Brand} {item.VehicleInfo.Model} {item.VehicleInfo.NummerPlate} Customer TelNr: {item.VehicleInfo.Customers.TeleNr}");
         }
     }
 }
