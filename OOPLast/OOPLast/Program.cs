@@ -49,9 +49,9 @@ mechanicTasks.Add(new MechanicTask(V5, Henrik));
 mechanicTasks.Add(new MechanicTask(V6, Henrik));
 mechanicTasks.Add(new MechanicTask(V7, Thomas));
 
-string custName = "Cringe Cringeson";
+string custName = "Henrik Nielsen";
 string[] sub = custName.Split(' ');
-string veh = "Truck";
+string veh = "car";
 
 VehiclesEnum _vehiclesEnum;
 if (Enum.TryParse<VehiclesEnum>(veh, true, out _vehiclesEnum))
@@ -63,14 +63,18 @@ if (Enum.TryParse<VehiclesEnum>(veh, true, out _vehiclesEnum))
     {
         foreach (var item2 in mechanicTasks)
         {
-            if (item2.MechanicInfo.VehicleType == veh)
+            if (item2.MechanicInfo.VehicleType == _vehiclesEnum.ToString())
             {
                 if (item.VehicleInfo.Customers.FirstName == sub[0] && item.VehicleInfo.Customers.LastName == sub[1])
                 {
                     Console.WriteLine($"{item.MechanicInfo.FirstName} {item.MechanicInfo.LastName} Vehicles: {item2.VehicleInfo.Brand} {item2.VehicleInfo.Model} {item2.VehicleInfo.NummerPlate}");
                 }
-            }
 
+                else if (item.MechanicInfo.FirstName == sub[0] && item.MechanicInfo.LastName== sub[1])
+                {
+                    Console.WriteLine($"Vehicles: {item.VehicleInfo.Brand} {item.VehicleInfo.Model} {item.VehicleInfo.NummerPlate} Customer TelNr: {item.VehicleInfo.Customers.TeleNr}");
+                }
+            }
         }
     }
 }
